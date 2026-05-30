@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Esta etiqueta declara el uso de HTML5. -->
+    <meta charset="UTF-8" />
+    <!-- Esta etiqueta permite mostrar correctamente caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Esta etiqueta hace que la página se adapte al tamaño de pantalla. -->
+    <meta
+      name="description"
+      content="Formulario de contacto de muestra para Eco Vida, proyecto de servicios de jardinería y paisajismo."
+    />
+    <!-- Esta etiqueta describe el contenido de la página para buscadores y redes sociales. -->
+    <meta
+      name="keywords"
+      content="contacto Eco Vida, formulario de contacto, jardinería, paisajismo"
+    />
+    <!-- Esta etiqueta reúne palabras clave básicas relacionadas con esta página. -->
+    <meta name="author" content="Eco Vida" />
+    <!-- Esta etiqueta indica el autor o nombre del proyecto. -->
+    <meta name="theme-color" content="#235b35" />
+    <!-- Esta etiqueta define el color principal que algunos navegadores móviles pueden usar. -->
+    <title>Contacto - Eco Vida</title>
+    <!-- Este título aparece en la pestaña del navegador. -->
+    <link rel="icon" href="img/eco_vida_logo_01.jpeg" type="image/jpeg" />
+    <!-- Este enlace usa el logo como icono de la pestaña del navegador. -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Este enlace carga Bootstrap para los estilos base. -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Este enlace carga los estilos propios del proyecto. -->
+  </head>
+  <body>
+    <!-- Aquí empieza el contenido visible de la página. -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Esta barra de navegación conecta las páginas principales. -->
+      <div class="container">
+        <!-- Este contenedor centra la barra de navegación. -->
+        <a class="navbar-brand" href="index.html">
+          <!-- Esta imagen funciona como icono pequeño junto al nombre del sitio. -->
+          <img
+            src="img/eco_vida_logo_01.jpeg"
+            alt="Logo de Eco Vida"
+            class="logo-navbar"
+          />
+          Eco Vida
+        </a>
+        <!-- Este enlace lleva al usuario a la página de inicio. -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Mostrar menú"
+        >
+          <!-- Este botón abre el menú en celulares. -->
+          <span class="navbar-toggler-icon"></span>
+          <!-- Este icono representa el botón del menú móvil. -->
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <!-- Este bloque agrupa los enlaces del menú. -->
+          <div class="navbar-nav ml-auto">
+            <!-- Este contenedor alinea los enlaces a la derecha. -->
+            <a class="nav-item nav-link" href="index.html">Inicio</a>
+            <!-- Este enlace lleva al inicio. -->
+            <a class="nav-item nav-link" href="servicios.html">Servicios</a>
+            <!-- Este enlace lleva a la página de servicios. -->
+            <a class="nav-item nav-link" href="acerca.html">Acerca de</a>
+            <!-- Este enlace lleva a la página informativa del proyecto. -->
+            <a class="nav-item nav-link active" href="contacto.html"
+              >Contacto</a
+            >
+            <!-- Este enlace marca la página actual como activa. -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <!-- Este contenido principal muestra la información de contacto. -->
+      <div class="row justify-content-center">
+        <!-- Esta fila centra el formulario en la pantalla. -->
+        <div class="col-lg-8">
+          <!-- Esta columna limita el ancho para que el formulario sea cómodo de leer. -->
+          <div class="caja-contacto p-4 p-md-5">
+            <!-- Esta caja envuelve todo el formulario. -->
+            <h1 class="text-center mb-3">Contáctanos</h1>
+            <!-- Este título presenta la sección de contacto. -->
+            <p class="text-center mb-4">
+              Completa este formulario de muestra y te mostraremos un mensaje
+              de confirmación.
+            </p>
+            <!-- Este párrafo explica al usuario qué hacer. -->
+
+            <form id="formContacto">
+              <!-- Este formulario recopila los datos del usuario. -->
+              <div class="form-group">
+                <!-- Este bloque agrupa la etiqueta y el campo del nombre. -->
+                <label for="nombre">Nombre completo</label>
+                <!-- Esta etiqueta describe el campo del nombre. -->
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-control"
+                  placeholder="Escribe tu nombre"
+                  minlength="3"
+                  maxlength="80"
+                  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,80}"
+                  autocomplete="name"
+                  required
+                />
+                <!-- Este campo recibe el nombre del usuario y es obligatorio. -->
+              </div>
+
+              <div class="form-group">
+                <!-- Este bloque agrupa la etiqueta y el campo del correo. -->
+                <label for="correo">Correo electrónico</label>
+                <!-- Esta etiqueta describe el campo del correo. -->
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  class="form-control"
+                  placeholder="ejemplo@correo.com"
+                  maxlength="120"
+                  autocomplete="email"
+                  required
+                />
+                <!-- Este campo recibe el correo del usuario y es obligatorio. -->
+              </div>
+
+              <div class="form-group">
+                <!-- Este bloque agrupa la etiqueta y el campo del teléfono. -->
+                <label for="telefono">Número telefónico</label>
+                <!-- Esta etiqueta describe el campo del teléfono. -->
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  class="form-control"
+                  placeholder="Ejemplo: +506 8888-8888"
+                  pattern="^\+506\s[0-9]{4}-[0-9]{4}$"
+                  inputmode="tel"
+                  maxlength="14"
+                  autocomplete="tel"
+                  required
+                />
+                <!-- Este campo recibe el número telefónico del usuario y es obligatorio. -->
+              </div>
+
+              <div class="form-group">
+                <!-- Este bloque agrupa la etiqueta y la lista del motivo. -->
+                <label for="motivo">Motivo de contacto</label>
+                <!-- Esta etiqueta explica para qué sirve la lista. -->
+                <select id="motivo" name="motivo" class="form-control" required>
+                  <!-- Esta lista permite elegir un motivo de contacto. -->
+                  <option value="">Seleccione una opción</option>
+                  <!-- Esta opción sirve como aviso inicial. -->
+                  <option value="Consulta">Consulta</option>
+                  <!-- Esta opción representa una consulta general. -->
+                  <option value="Cotizacion">Cotización</option>
+                  <!-- Esta opción representa una solicitud de precio. -->
+                  <option value="Mantenimiento">Mantenimiento</option>
+                  <!-- Esta opción representa interés en mantenimiento. -->
+                </select>
+              </div>
+
+              <div class="form-group">
+                <!-- Este bloque agrupa la etiqueta y el área de mensaje. -->
+                <label for="mensaje">Mensaje</label>
+                <!-- Esta etiqueta describe el contenido esperado. -->
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Escribe aquí tu mensaje"
+                  minlength="10"
+                  maxlength="500"
+                  required
+                ></textarea>
+                <!-- Esta área permite escribir el mensaje principal del usuario. -->
+                <small class="form-text text-muted">
+                  Caracteres escritos: <span id="contador">0</span>
+                </small>
+                <!-- Este texto muestra cuántos caracteres lleva el mensaje. -->
+              </div>
+
+              <button type="submit" class="btn btn-success btn-block">
+                Enviar formulario
+              </button>
+              <!-- Este botón envía el formulario. -->
+            </form>
+
+            <div
+              id="mensajeConfirmacion"
+              class="alert alert-success mt-4 d-none"
+            >
+              <!-- Esta alerta se mostrará después de enviar el formulario. -->
+              Mensaje de muestra generado correctamente. Por ahora este
+              formulario no envía datos a un servidor.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <!-- Este pie de página cierra la página con un estilo uniforme. -->
+      <p class="mb-0">espacios verdes que enamoran</p>
+      <!-- Este texto resume el contenido de la página. -->
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga la librería jQuery. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga Popper para Bootstrap. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script activa los componentes de Bootstrap. -->
+
+    <script src="js/script.js"></script>
+    <!-- Este script carga el JavaScript propio del proyecto. -->
+  </body>
+</html>

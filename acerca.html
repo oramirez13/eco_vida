@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Esta etiqueta declara el uso de HTML5. -->
+    <meta charset="UTF-8" />
+    <!-- Esta etiqueta permite mostrar correctamente caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Esta etiqueta hace que la página se adapte al tamaño de pantalla del dispositivo. -->
+    <meta
+      name="description"
+      content="Conoce Eco Vida, un proyecto enfocado en transformar espacios exteriores con soluciones de jardinería y paisajismo."
+    />
+    <!-- Esta etiqueta describe el contenido de la página para buscadores y redes sociales. -->
+    <meta
+      name="keywords"
+      content="acerca de Eco Vida, jardinería, paisajismo, espacios exteriores"
+    />
+    <!-- Esta etiqueta reúne palabras clave básicas relacionadas con esta página. -->
+    <meta name="author" content="Eco Vida" />
+    <!-- Esta etiqueta indica el autor o nombre del proyecto. -->
+    <meta name="theme-color" content="#235b35" />
+    <!-- Esta etiqueta define el color principal que algunos navegadores móviles pueden usar. -->
+    <title>Acerca de - Eco Vida</title>
+    <!-- Este título aparece en la pestaña del navegador. -->
+    <link rel="icon" href="img/eco_vida_logo_01.jpeg" type="image/jpeg" />
+    <!-- Este enlace usa el logo como icono de la pestaña del navegador. -->
+
+    <!--Bootstrap/css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Este enlace carga Bootstrap para usar su sistema de grilla y estilos base. -->
+
+    <!--css/style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Este enlace carga los estilos personalizados del proyecto. -->
+  </head>
+  <body>
+    <!-- Aquí empieza el contenido visible de la página. -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Esta barra de navegación conecta las páginas principales del sitio. -->
+      <div class="container">
+        <!-- Este contenedor centra la barra de navegación. -->
+        <a class="navbar-brand" href="index.html">
+          <!-- Este enlace lleva al usuario a la página de inicio. -->
+          <img
+            src="img/eco_vida_logo_01.jpeg"
+            alt="Logo de Eco Vida"
+            class="logo-navbar"
+          />
+          <!-- Esta imagen funciona como icono pequeño junto al nombre del sitio. -->
+          Eco Vida
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Mostrar menú"
+        >
+          <!-- Este botón aparece en pantallas pequeñas para abrir el menú. -->
+          <span class="navbar-toggler-icon"></span>
+          <!-- Este icono representa las tres líneas típicas del menú móvil. -->
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <!-- Este bloque agrupa los enlaces del menú y se colapsa en móvil. -->
+          <div class="navbar-nav ml-auto">
+            <!-- Este contenedor alinea los enlaces de navegación a la derecha. -->
+            <a class="nav-item nav-link" href="index.html">Inicio</a>
+            <!-- Este enlace lleva al inicio del sitio. -->
+            <a class="nav-item nav-link" href="servicios.html">Servicios</a>
+            <!-- Este enlace lleva a la página de servicios. -->
+            <a class="nav-item nav-link active" href="acerca.html">Acerca de</a>
+            <!-- Este enlace marca la página actual como activa. -->
+            <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+            <!-- Este enlace lleva a la página de contacto. -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <!-- La etiqueta main contiene el contenido principal de esta página. -->
+
+      <div class="row align-items-center">
+        <!-- Esta fila organiza el texto y la imagen en dos columnas. -->
+        <!-- col-12 hace que cada columna ocupe el ancho completo en celular. -->
+        <!-- col-md-6 hace que cada columna ocupe la mitad del ancho en pantallas medianas o grandes. -->
+
+        <div class="col-12 col-md-6 mb-4">
+          <!-- Esta columna muestra el texto descriptivo de la empresa. -->
+          <!-- En celular ocupa todo el ancho. En escritorio ocupa la mitad izquierda. -->
+          <h2>Sobre Nosotros</h2>
+          <!-- Este título encabeza el bloque de texto. -->
+
+          <p class="justificado">
+            En Eco Vida nos dedicamos a transformar espacios exteriores en
+            paraísos naturales. Nuestra pasión por la botánica nos permite
+            ofrecer soluciones personalizadas para cada cliente.
+          </p>
+          <!-- Este párrafo describe brevemente la empresa. -->
+        </div>
+
+        <div class="col-12 col-md-6 text-center mb-4">
+          <!-- Esta columna muestra la imagen del equipo. -->
+          <!-- En celular ocupa todo el ancho y aparece debajo del texto. -->
+          <!-- En escritorio ocupa la mitad derecha junto al texto. -->
+          <img
+            src="img/eco_vida_logo_01.jpeg"
+            alt="Equipo Eco Vida"
+            class="img-fluid img-equipo"
+          />
+          <!-- img-fluid hace que la imagen nunca supere el ancho de su columna. -->
+          <!-- img-equipo aplica los estilos de tamaño y sombra definidos en style.css. -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <!-- Este pie de página cierra la página con el mismo estilo del resto del sitio. -->
+      <p class="mb-0">espacios verdes que enamoran</p>
+      <!-- Este texto resume el propósito del proyecto. -->
+    </footer>
+
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga la librería jQuery. -->
+
+    <!--Bootstrap/popper-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga Popper, que Bootstrap necesita para algunos componentes. -->
+
+    <!--Bootstrap/js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script activa los componentes interactivos de Bootstrap. -->
+
+    <!-- js/script.js -->
+    <script src="js/script.js"></script>
+    <!-- Este script carga el JavaScript propio del proyecto. -->
+  </body>
+</html>

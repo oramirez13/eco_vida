@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Esta etiqueta declara el uso de HTML5. -->
+    <meta charset="UTF-8" />
+    <!-- Esta etiqueta permite mostrar correctamente caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Esta etiqueta hace que la página se adapte a celulares y computadoras. -->
+    <meta
+      name="description"
+      content="Página no encontrada en el sitio de Eco Vida."
+    />
+    <!-- Esta etiqueta describe el contenido de esta página de error. -->
+    <meta name="author" content="Eco Vida" />
+    <!-- Esta etiqueta indica el autor o nombre del proyecto. -->
+    <meta name="theme-color" content="#235b35" />
+    <!-- Esta etiqueta define el color principal que algunos navegadores móviles pueden usar. -->
+    <title>Página no encontrada - Eco Vida</title>
+    <!-- Este título aparece en la pestaña del navegador. -->
+    <link rel="icon" href="img/eco_vida_logo_01.jpeg" type="image/jpeg" />
+    <!-- Este enlace usa el logo como icono de la pestaña del navegador. -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Este enlace carga Bootstrap desde internet. -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Este enlace carga los estilos personalizados del proyecto. -->
+  </head>
+  <body>
+    <!-- Aquí empieza el contenido visible de la página. -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Esta barra de navegación permite volver a las páginas principales. -->
+      <div class="container">
+        <!-- Este contenedor centra el contenido del menú. -->
+        <a class="navbar-brand" href="index.html">
+          <!-- Este enlace lleva a la página de inicio. -->
+          <img
+            src="img/eco_vida_logo_01.jpeg"
+            alt="Logo de Eco Vida"
+            class="logo-navbar"
+          />
+          <!-- Esta imagen muestra el logo pequeño del sitio. -->
+          Eco Vida
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Mostrar menú"
+        >
+          <!-- Este botón abre el menú en pantallas pequeñas. -->
+          <span class="navbar-toggler-icon"></span>
+          <!-- Este icono representa el menú móvil. -->
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <!-- Este bloque contiene los enlaces principales del sitio. -->
+          <div class="navbar-nav ml-auto">
+            <!-- Este contenedor alinea los enlaces a la derecha. -->
+            <a class="nav-item nav-link" href="index.html">Inicio</a>
+            <!-- Este enlace lleva a la página de inicio. -->
+            <a class="nav-item nav-link" href="servicios.html">Servicios</a>
+            <!-- Este enlace lleva a la página de servicios. -->
+            <a class="nav-item nav-link" href="acerca.html">Acerca de</a>
+            <!-- Este enlace lleva a la página informativa. -->
+            <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+            <!-- Este enlace lleva a la página de contacto. -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <!-- Esta etiqueta contiene el mensaje principal de error. -->
+      <section class="text-center caja-contacto p-4 p-md-5">
+        <!-- Esta sección muestra el contenido de la página 404. -->
+        <h1 class="mb-3">Página no encontrada</h1>
+        <!-- Este título explica que la ruta solicitada no existe. -->
+        <p class="mb-4">
+          La página que buscas no está disponible. Puedes volver al inicio o
+          revisar nuestros servicios.
+        </p>
+        <!-- Este párrafo orienta al visitante hacia páginas útiles. -->
+        <a href="index.html" class="btn btn-success mb-2">Volver al inicio</a>
+        <!-- Este botón lleva al usuario a la página principal. -->
+        <a href="servicios.html" class="btn btn-outline-success mb-2"
+          >Ver servicios</a
+        >
+        <!-- Este botón lleva al usuario a la página de servicios. -->
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <!-- Este pie de página mantiene el estilo visual del sitio. -->
+      <p class="mb-0">espacios verdes que enamoran</p>
+      <!-- Este texto conserva el mensaje de marca del proyecto. -->
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga la librería jQuery desde internet. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga Popper, requerido por Bootstrap. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga los componentes interactivos de Bootstrap. -->
+
+    <script src="js/script.js"></script>
+    <!-- Este script carga el JavaScript propio del proyecto. -->
+  </body>
+</html>

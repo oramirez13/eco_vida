@@ -1,0 +1,509 @@
+/* Estas variables guardan los colores principales de la paleta. */
+:root {
+  /* Este color verde oscuro se usará en textos y resaltados. */
+  --color-verde: #235b35;
+  /* Este color verde medio se usará en bordes y estados activos. */
+  --color-verde-medio: #3f7a4e;
+  /* Este color verde suave se usará en fondos ligeros y detalles. */
+  --color-verde-suave: #dcecdf;
+  /* Este color café oscuro se usará en bloques secundarios. */
+  --color-cafe: #7a4e2e;
+  /* Este color naranja se usará en acentos cálidos. */
+  --color-naranja: #b3682c;
+  /* Este color amarillo se usará en botones y detalles destacados. */
+  --color-amarillo: #fcc800;
+  /* Este color blanco se usará como fondo principal del sitio. */
+  --color-fondo: #ffffff;
+  /* Este color se usará para bordes suaves y separadores. */
+  --color-borde: rgba(35, 91, 53, 0.2);
+  /* Esta fuente principal mantiene una lectura sencilla en todo el sitio. */
+  --fuente-principal: Arial, sans-serif;
+  /* Este valor define el tamaño base de la letra del sitio. */
+  --tamano-base: 16px;
+  /* Este valor define la separación vertical entre líneas de texto. */
+  --altura-linea: 1.6;
+  /* Este espacio pequeño se reutiliza en separaciones cortas. */
+  --espaciado-chico: 8px;
+  /* Este espacio mediano se reutiliza en separaciones normales. */
+  --espaciado-medio: 16px;
+  /* Este espacio grande se reutiliza en separaciones amplias. */
+  --espaciado-grande: 32px;
+  /* Este valor redondea las esquinas de cajas e imágenes. */
+  --radio-borde: 12px;
+  /* Esta sombra se reutiliza en cajas destacadas del sitio. */
+  --sombra-suave: 0 10px 24px rgba(0, 0, 0, 0.12);
+  /* Esta transición se reutiliza en estados hover y focus. */
+  --transicion-rapida: 0.2s ease;
+}
+
+/* Este selector aplica una base uniforme a todos los elementos. */
+*,
+*::before,
+*::after {
+  /* Esta propiedad incluye el padding y el borde dentro del ancho total. */
+  box-sizing: border-box;
+}
+
+/* Este selector configura el elemento raíz de la página. */
+html {
+  /* Esta propiedad define que 1rem equivale al tamaño base declarado. */
+  font-size: var(--tamano-base);
+  /* Esta propiedad suaviza los saltos cuando se navega hacia anclas internas. */
+  scroll-behavior: smooth;
+}
+
+/* Este selector aplica estilos generales a toda la página. */
+body {
+  /* Este color de fondo usa una versión clara inspirada en la paleta. */
+  background-color: var(--color-fondo);
+  /* Esta propiedad elimina los márgenes automáticos del navegador. */
+  margin: 0;
+  /* Esta propiedad define una fuente sencilla y fácil de leer. */
+  font-family: var(--fuente-principal);
+  /* Esta propiedad define el tamaño normal del texto. */
+  font-size: 1rem;
+  /* Esta propiedad mejora la separación entre líneas. */
+  line-height: var(--altura-linea);
+  /* Este color mejora la lectura del texto principal. */
+  color: var(--color-verde);
+  /* Esta propiedad evita que aparezca una barra horizontal innecesaria. */
+  overflow-x: hidden;
+  /* Esta propiedad protege el contenido si el dispositivo tiene muesca superior. */
+  padding-top: env(safe-area-inset-top, 0px);
+  /* Esta propiedad protege el contenido si el dispositivo tiene borde derecho especial. */
+  padding-right: env(safe-area-inset-right, 0px);
+  /* Esta propiedad protege el contenido si el dispositivo tiene barra inferior especial. */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* Esta propiedad protege el contenido si el dispositivo tiene borde izquierdo especial. */
+  padding-left: env(safe-area-inset-left, 0px);
+  /* Esta propiedad mejora la apariencia del texto en navegadores WebKit. */
+  -webkit-font-smoothing: antialiased;
+  /* Esta propiedad mejora la apariencia del texto en Firefox sobre macOS y Linux. */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Este selector evita que las imágenes se salgan de su contenedor. */
+img {
+  /* Esta propiedad limita el ancho de la imagen al ancho disponible. */
+  max-width: 100%;
+  /* Esta propiedad mantiene la proporción original de la imagen. */
+  height: auto;
+}
+
+/* Este selector cambia el fondo de la barra de navegación. */
+.bg-dark {
+  /* Esta propiedad reemplaza el color oscuro por verde para el menú y el pie. */
+  background-color: var(--color-verde) !important;
+}
+
+/* Este selector cambia el estilo del nombre del sitio en la barra. */
+.navbar-dark .navbar-brand {
+  /* Esta propiedad resalta el nombre del sitio con amarillo. */
+  color: var(--color-amarillo);
+  /* Esta propiedad pone el texto en negrita. */
+  font-weight: bold;
+  /* Esta propiedad alinea el icono y el texto en una misma línea. */
+  display: inline-flex;
+  /* Esta propiedad centra mejor los elementos del logo. */
+  align-items: center;
+}
+
+/* Este selector controla el icono pequeño del navbar. */
+.logo-navbar {
+  /* Esta propiedad define un tamaño parecido al de un favicon. */
+  width: 32px;
+  /* Esta propiedad mantiene el icono con alto uniforme. */
+  height: 32px;
+  /* Esta propiedad separa un poco la imagen del texto. */
+  margin-right: 8px;
+  /* Esta propiedad redondea la imagen para que se vea más suave. */
+  border-radius: 50%;
+  /* Esta propiedad evita deformar la imagen dentro del espacio. */
+  object-fit: cover;
+}
+
+/* Este selector cambia el color de los enlaces del menú. */
+.navbar-dark .navbar-nav .nav-link {
+  /* Este color permite que los enlaces se lean sobre el fondo oscuro. */
+  color: #ffffff;
+}
+
+/* Este selector resalta la opción activa del menú. */
+.navbar-dark .navbar-nav .nav-link.active {
+  /* Este color amarillo destaca la página actual. */
+  color: var(--color-amarillo);
+}
+
+/* Este selector define el área superior de la página principal. */
+.encabezado-principal {
+  /* Este fondo blanco hace que el encabezado se vea más limpio. */
+  background-color: #ffffff;
+  /* Este color verde mantiene la identidad principal del sitio. */
+  color: var(--color-verde);
+}
+
+/* Este selector reduce el tamaño del titulo principal del encabezado. */
+.encabezado-principal h1 {
+  /* Esta propiedad hace que el texto se vea mas equilibrado. */
+  font-size: 2.2rem;
+}
+
+/* Este selector controla el tamaño del logo dentro del encabezado. */
+.logo-encabezado {
+  /* Esta propiedad evita que la imagen se vea demasiado grande. */
+  max-width: 180px;
+  /* Esta propiedad mantiene la proporción original del logo. */
+  height: auto;
+}
+
+/* Este selector agrega un borde redondeado y una sombra simple. */
+.sombra-suave {
+  /* Esta propiedad redondea las esquinas del elemento. */
+  border-radius: var(--radio-borde);
+  /* Esta propiedad agrega una sombra suave debajo del elemento. */
+  box-shadow: var(--sombra-suave);
+}
+
+/* Este selector controla el tamaño de las imágenes del carrusel. */
+.imagen-carrusel {
+  /* Esta propiedad define una altura uniforme para todas las imágenes. */
+  height: 430px;
+  /* Esta propiedad evita deformar la imagen al llenar el espacio. */
+  object-fit: cover;
+}
+
+/* Este selector da estilo a las tarjetas de servicios. */
+.tarjeta-servicio {
+  /* Esta propiedad agrega un borde suave con color verde. */
+  border: 2px solid var(--color-borde);
+  /* Este color da un fondo claro a la tarjeta. */
+  background-color: #ffffff;
+  /* Esta propiedad agrega una sombra suave a cada tarjeta. */
+  box-shadow: var(--sombra-suave);
+  /* Esta propiedad anima los cambios visuales de la tarjeta. */
+  transition: transform var(--transicion-rapida);
+  /* Esta propiedad muestra la mano del mouse para indicar que la tarjeta es clicable. */
+  cursor: pointer;
+}
+
+/* Este selector aplica un pequeño movimiento al pasar el mouse. */
+.tarjeta-servicio:hover {
+  /* Esta propiedad mueve la tarjeta un poco hacia arriba. */
+  transform: translateY(-6px);
+}
+
+/* Este selector marca la tarjeta cuando se navega con teclado. */
+.tarjeta-servicio:focus {
+  /* Esta propiedad dibuja un borde visible alrededor de la tarjeta. */
+  outline: 3px solid var(--color-amarillo);
+  /* Esta propiedad separa el borde de enfoque del borde normal. */
+  outline-offset: 3px;
+}
+
+/* Este selector justifica los párrafos largos para que se vean más ordenados. */
+.justificado {
+  /* Esta propiedad reparte mejor el texto a lo ancho del bloque. */
+  text-align: justify;
+}
+
+/* Este selector controla el tamaño de la imagen principal de la página Acerca de. */
+.img-equipo {
+  /* Esta propiedad evita que la imagen se vea demasiado ancha. */
+  max-width: 280px;
+  /* Esta propiedad redondea un poco las esquinas de la imagen. */
+  border-radius: var(--radio-borde);
+  /* Esta propiedad agrega una sombra ligera para destacarla. */
+  box-shadow: var(--sombra-suave);
+}
+
+/* Este selector controla el tamaño de las imágenes de servicios. */
+.imagen-servicio {
+  /* Esta propiedad define una altura igual para todas las imágenes. */
+  height: 220px;
+  /* Esta propiedad recorta la imagen sin deformarla. */
+  object-fit: cover;
+}
+
+/* Este selector cambia el color de títulos secundarios. */
+h1,
+h2,
+h5 {
+  /* Este color verde mantiene la paleta simple del proyecto. */
+  color: var(--color-verde);
+}
+
+/* Este selector conserva el texto verde dentro del encabezado principal. */
+.encabezado-principal h1,
+.encabezado-principal p {
+  /* Este color verde mantiene el texto visible sobre fondo blanco. */
+  color: var(--color-verde);
+}
+
+/* Este selector cambia el estilo base de los botones verdes del proyecto. */
+.btn-success {
+  /* Este color de fondo usa el verde de la paleta. */
+  background-color: var(--color-verde);
+  /* Este color del borde mantiene consistencia visual. */
+  border-color: var(--color-verde);
+}
+
+/* Este selector cambia el estilo del botón cuando el mouse pasa encima. */
+.btn-success:hover {
+  /* Este color da un efecto más cálido al interactuar con el botón. */
+  background-color: var(--color-verde-medio);
+  /* Este borde acompaña el cambio del botón. */
+  border-color: var(--color-verde-medio);
+}
+
+/* Este selector cambia el estilo de botones con borde. */
+.btn-outline-success {
+  /* Este color usa verde para el texto del botón. */
+  color: var(--color-verde);
+  /* Este borde usa verde para mantener consistencia visual. */
+  border-color: var(--color-verde);
+}
+
+/* Este selector cambia el estado hover del botón con borde. */
+.btn-outline-success:hover {
+  /* Este fondo usa amarillo para destacar el botón. */
+  background-color: var(--color-amarillo);
+  /* Este borde mantiene el mismo amarillo del fondo. */
+  border-color: var(--color-amarillo);
+  /* Este color verde mantiene el texto dentro de la paleta pedida. */
+  color: var(--color-verde);
+}
+
+/* Este selector adapta el boton amarillo para que no use colores fuera de la paleta. */
+.btn-outline-warning {
+  /* Este color usa verde para el texto del botón. */
+  color: var(--color-verde);
+  /* Este borde amarillo marca el botón como acento visual. */
+  border-color: var(--color-amarillo);
+}
+
+/* Este selector cambia el estado hover del botón amarillo. */
+.btn-outline-warning:hover {
+  /* Este fondo amarillo crea un mensaje visual destacado. */
+  background-color: var(--color-amarillo);
+  /* Este borde conserva el mismo color del fondo. */
+  border-color: var(--color-amarillo);
+  /* Este color verde respeta la regla del texto. */
+  color: var(--color-verde);
+}
+
+/* Este selector da estilo a la caja principal del formulario. */
+.caja-contacto {
+  /* Este color pinta el fondo de la caja del formulario. */
+  background-color: #ffffff;
+  /* Esta propiedad redondea las esquinas de la caja. */
+  border-radius: var(--radio-borde);
+  /* Este borde suave usa un color de la paleta para enmarcar el formulario. */
+  border: 2px solid var(--color-borde);
+  /* Esta propiedad agrega una sombra ligera para destacar la caja. */
+  box-shadow: var(--sombra-suave);
+}
+
+/* Este selector da estilo al bloque principal de la cotización. */
+.caja-cotizacion {
+  /* Este fondo mantiene la tarjeta clara y fácil de leer. */
+  background-color: #ffffff;
+  /* Esta propiedad redondea las esquinas del bloque. */
+  border-radius: var(--radio-borde);
+  /* Este borde suave acompaña la paleta del proyecto. */
+  border: 2px solid var(--color-borde);
+  /* Esta propiedad agrega una sombra ligera para destacar la caja. */
+  box-shadow: var(--sombra-suave);
+}
+
+/* Este selector ordena cada línea mostrada en la plantilla de cotización. */
+.fila-cotizacion {
+  /* Esta propiedad deja espacio entre una línea y otra. */
+  margin-bottom: 14px;
+  /* Esta propiedad agrega espacio interno para que el texto respire. */
+  padding-bottom: 10px;
+  /* Este borde separa visualmente cada dato mostrado. */
+  border-bottom: 1px solid rgba(35, 91, 53, 0.12);
+}
+
+/* Este selector resalta la etiqueta de cada dato mostrado. */
+.etiqueta-cotizacion {
+  /* Esta propiedad pone la etiqueta en negrita. */
+  font-weight: bold;
+  /* Esta propiedad agrega un pequeño espacio con el valor mostrado. */
+  margin-right: 6px;
+  /* Este color conserva la identidad visual del sitio. */
+  color: var(--color-verde);
+}
+
+/* Este selector cambia el borde cuando un campo recibe atención. */
+.campo-activo {
+  /* Esta propiedad cambia el color de fondo del campo activo. */
+  background-color: #f7fcf8;
+  /* Esta propiedad dibuja un borde verde para destacar el campo. */
+  border: 1px solid var(--color-verde-medio);
+}
+
+/* Este selector cambia el borde cuando un campo recibe clic o foco. */
+.form-control:focus {
+  /* Esta propiedad cambia el color del borde al enfocar el campo. */
+  border-color: var(--color-verde-medio);
+  /* Esta sombra da un efecto suave sin complicar el diseño. */
+  box-shadow: 0 0 0 0.2rem rgba(63, 122, 78, 0.2);
+}
+
+/* Este selector mejora el enfoque visible de enlaces y botones de Bootstrap. */
+a:focus,
+.btn:focus {
+  /* Esta propiedad dibuja una línea clara cuando se navega con teclado. */
+  outline: 3px solid var(--color-amarillo);
+  /* Esta propiedad separa la línea de enfoque del elemento. */
+  outline-offset: 3px;
+}
+
+/* Este selector cambia el estilo de la alerta de confirmación. */
+.alert-success {
+  /* Este fondo amarillo hace que el mensaje destaque mas. */
+  background-color: #fff4b8;
+  /* Este borde amarillo mantiene el mensaje visible. */
+  border-color: var(--color-amarillo);
+  /* Este texto usa verde oscuro para mejor legibilidad. */
+  color: var(--color-verde);
+}
+
+/* Este selector cambia el estilo del pie de página. */
+footer {
+  /* Este fondo verde mantiene consistencia con el encabezado. */
+  background-color: var(--color-verde) !important;
+  /* Este color hace que el texto del pie sea fácil de leer. */
+  color: #ffffff;
+}
+
+/* Este selector se aplica a pantallas pequeñas como celulares. */
+@media (max-width: 767px) {
+  /* Este selector reduce el espacio vertical principal en celulares. */
+  main.container {
+    /* Esta propiedad evita que el contenido quede demasiado separado del menú. */
+    margin-top: var(--espaciado-grande) !important;
+    /* Esta propiedad evita espacios finales demasiado grandes en pantallas pequeñas. */
+    margin-bottom: var(--espaciado-grande) !important;
+  }
+
+  /* Este selector ajusta los títulos principales en celulares. */
+  h1 {
+    /* Esta propiedad evita que los títulos se vean demasiado grandes en pantallas angostas. */
+    font-size: 2rem;
+  }
+
+  /* Este selector ajusta los subtítulos en celulares. */
+  h2 {
+    /* Esta propiedad mantiene los subtítulos legibles sin ocupar demasiado espacio. */
+    font-size: 1.7rem;
+  }
+
+  /* Este selector permite que los botones largos se acomoden en celular. */
+  .btn {
+    /* Esta propiedad permite partir el texto si el botón no tiene suficiente ancho. */
+    white-space: normal;
+  }
+
+  /* Este selector reduce el movimiento de las tarjetas en pantallas táctiles. */
+  .tarjeta-servicio:hover {
+    /* Esta propiedad evita saltos visuales innecesarios al tocar una tarjeta. */
+    transform: none;
+  }
+
+  /* Este selector evita que el texto justificado se vea con espacios raros en celular. */
+  .justificado {
+    /* Esta propiedad mejora la lectura en pantallas angostas. */
+    text-align: left;
+  }
+
+  /* Este selector ajusta la altura del carrusel en móvil. */
+  .imagen-carrusel {
+    /* Esta altura hace que el carrusel se vea mejor en pantallas pequeñas. */
+    height: 230px;
+  }
+
+  /* Este selector ajusta la altura de las imágenes de servicios en móvil. */
+  .imagen-servicio {
+    /* Esta propiedad mantiene las tarjetas proporcionadas sin usar demasiada altura. */
+    height: 210px;
+  }
+
+  /* Este selector reduce un poco mas el titulo en celulares. */
+  .encabezado-principal h1 {
+    /* Esta propiedad evita que el encabezado ocupe demasiado espacio. */
+    font-size: 1.8rem;
+  }
+
+  /* Este selector reduce el logo en pantallas pequeñas. */
+  .logo-encabezado {
+    /* Esta propiedad adapta mejor la imagen al espacio móvil. */
+    max-width: 140px;
+  }
+
+  /* Este selector adapta las cajas principales en pantallas pequeñas. */
+  .caja-contacto,
+  .caja-cotizacion {
+    /* Esta propiedad reduce el borde redondeado para aprovechar mejor el ancho. */
+    border-radius: 10px;
+  }
+
+  /* Este selector organiza mejor cada dato del resumen en celular. */
+  .fila-cotizacion {
+    /* Esta propiedad coloca la etiqueta y el valor en columnas. */
+    display: flex;
+    /* Esta propiedad ubica el valor debajo de la etiqueta. */
+    flex-direction: column;
+  }
+
+  /* Este selector separa la etiqueta del valor en el resumen móvil. */
+  .etiqueta-cotizacion {
+    /* Esta propiedad agrega un espacio inferior pequeño antes del valor. */
+    margin-bottom: 4px;
+  }
+}
+
+/* Este selector se aplica a celulares muy angostos. */
+@media (max-width: 360px) {
+  /* Este selector reduce un poco más los títulos principales. */
+  h1 {
+    /* Esta propiedad ayuda a que títulos largos no se sientan apretados. */
+    font-size: 1.8rem;
+  }
+
+  /* Este selector reduce un poco más los subtítulos. */
+  h2 {
+    /* Esta propiedad evita que los subtítulos ocupen demasiadas líneas. */
+    font-size: 1.5rem;
+  }
+
+  /* Este selector ajusta el título principal del encabezado en celulares angostos. */
+  .encabezado-principal h1 {
+    /* Esta propiedad mantiene el título principal dentro del ancho disponible. */
+    font-size: 1.6rem;
+  }
+
+  /* Este selector reduce el logo principal en celulares angostos. */
+  .logo-encabezado {
+    /* Esta propiedad deja más espacio para el título y el botón. */
+    max-width: 120px;
+  }
+}
+
+/* Este bloque respeta la preferencia del sistema para reducir movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  /* Este selector afecta a todos los elementos y pseudo-elementos. */
+  *,
+  *::before,
+  *::after {
+    /* Esta propiedad reduce la duración de animaciones al mínimo. */
+    animation-duration: 0.01ms !important;
+    /* Esta propiedad evita que una animación se repita muchas veces. */
+    animation-iteration-count: 1 !important;
+    /* Esta propiedad reduce las transiciones al mínimo. */
+    transition-duration: 0.01ms !important;
+    /* Esta propiedad desactiva el desplazamiento suave si el usuario lo prefiere. */
+    scroll-behavior: auto !important;
+  }
+}

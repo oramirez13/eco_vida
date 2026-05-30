@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Esta etiqueta indica el tipo de documento HTML5. -->
+    <meta charset="UTF-8" />
+    <!-- Esta etiqueta permite mostrar tildes, eñes y caracteres especiales correctamente. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Esta etiqueta adapta el diseño al ancho de la pantalla del dispositivo. -->
+    <meta
+      name="description"
+      content="Eco Vida ofrece servicios de jardinería, mantenimiento de zonas verdes y paisajismo para espacios exteriores."
+    />
+    <!-- Esta etiqueta describe el contenido de la página para buscadores y redes sociales. -->
+    <meta
+      name="keywords"
+      content="Eco Vida, jardinería, paisajismo, mantenimiento de jardines, zonas verdes"
+    />
+    <!-- Esta etiqueta reúne palabras clave básicas relacionadas con el sitio. -->
+    <meta name="author" content="Eco Vida" />
+    <!-- Esta etiqueta indica el autor o nombre del proyecto. -->
+    <meta name="theme-color" content="#235b35" />
+    <!-- Esta etiqueta define el color principal que algunos navegadores móviles pueden usar. -->
+    <title>Inicio - Eco Vida</title>
+    <!-- Este título aparece en la pestaña del navegador. -->
+    <link rel="icon" href="img/eco_vida_logo_01.jpeg" type="image/jpeg" />
+    <!-- Este enlace usa el logo como icono de la pestaña del navegador. -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Este enlace carga los estilos de Bootstrap desde internet. -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Este enlace carga los estilos personalizados del proyecto. -->
+  </head>
+  <body>
+    <!-- Aquí comienza todo el contenido visible de la página. -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Esta barra de navegación muestra el menú principal del sitio. -->
+      <div class="container">
+        <!-- Este contenedor centra el contenido y le da un ancho ordenado. -->
+        <a class="navbar-brand" href="index.html">
+          <!-- Esta imagen funciona como icono pequeño junto al nombre del sitio. -->
+          <img
+            src="img/eco_vida_logo_01.jpeg"
+            alt="Logo de Eco Vida"
+            class="logo-navbar"
+          />
+          Eco Vida
+        </a>
+        <!-- Este enlace funciona como nombre o logo del sitio. -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Mostrar menú"
+        >
+          <!-- Este botón aparece en pantallas pequeñas para abrir el menú. -->
+          <span class="navbar-toggler-icon"></span>
+          <!-- Este icono muestra las líneas típicas del menú móvil. -->
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <!-- Este bloque contiene los enlaces que se colapsan en móvil. -->
+          <div class="navbar-nav ml-auto">
+            <!-- Este contenedor agrupa los enlaces de navegación. -->
+            <a class="nav-item nav-link active" href="index.html">Inicio</a>
+            <!-- Este enlace lleva a la página de inicio. -->
+            <a class="nav-item nav-link" href="servicios.html">Servicios</a>
+            <!-- Este enlace lleva a la página de servicios. -->
+            <a class="nav-item nav-link" href="acerca.html">Acerca de</a>
+            <!-- Este enlace lleva a la página informativa del sitio. -->
+            <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+            <!-- Este enlace lleva a la página de contacto. -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="encabezado-principal">
+      <!-- Este encabezado presenta el tema principal de la página. -->
+      <div class="container text-center py-5">
+        <!-- Esta imagen muestra el logo principal de Eco Vida en la portada. -->
+        <img
+          src="img/eco_vida_logo_01.jpeg"
+          alt="Logo de Eco Vida"
+          class="logo-encabezado mb-4"
+        />
+        <!-- Esta clase permite controlar el tamaño del logo desde CSS. -->
+        <!-- Este contenedor centra el texto y agrega espacio vertical. -->
+        <h1 class="mb-3">Bienvenido a Eco Vida</h1>
+        <!-- Este título principal resume el sitio. -->
+
+        <a href="servicios.html" class="btn btn-success btn-lg"
+          >Ver nuestros servicios</a
+        >
+        <!-- Este botón dirige al usuario hacia la página de servicios. -->
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <!-- La etiqueta main contiene el contenido principal de esta página. -->
+      <section class="mb-5">
+        <!-- Esta sección contiene la pasarela de imágenes solicitada. -->
+
+        <div id="carruselJardin" class="carousel slide" data-ride="carousel">
+          <!-- Este bloque crea un carrusel de Bootstrap. -->
+          <ol class="carousel-indicators">
+            <!-- Estos indicadores permiten cambiar de imagen manualmente. -->
+            <li
+              data-target="#carruselJardin"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <!-- Este indicador representa la primera imagen. -->
+            <li data-target="#carruselJardin" data-slide-to="1"></li>
+            <!-- Este indicador representa la segunda imagen. -->
+            <li data-target="#carruselJardin" data-slide-to="2"></li>
+            <!-- Este indicador representa la tercera imagen. -->
+          </ol>
+
+          <div class="carousel-inner rounded sombra-suave">
+            <!-- Este contenedor guarda todas las imágenes del carrusel. -->
+            <div class="carousel-item active">
+              <!-- Esta es la primera diapositiva y por eso empieza activa. -->
+              <img
+                src="img/jardineria_5.jpg"
+                class="d-block w-100 imagen-carrusel"
+                alt="Diseño de jardín con plantas decorativas"
+              />
+              <!-- Esta imagen se muestra ocupando todo el ancho del carrusel. -->
+            </div>
+
+            <div class="carousel-item">
+              <!-- Esta es la segunda diapositiva del carrusel. -->
+              <img
+                src="img/jardineria_7.jpg"
+                class="d-block w-100 imagen-carrusel"
+                alt="Mantenimiento de jardín con poda especializada"
+              />
+              <!-- Esta imagen muestra otro trabajo del proyecto. -->
+            </div>
+
+            <div class="carousel-item">
+              <!-- Esta es la tercera diapositiva del carrusel. -->
+              <img
+                src="img/jardineria_8.jpg"
+                class="d-block w-100 imagen-carrusel"
+                alt="Sistema de riego instalado en zona verde"
+              />
+              <!-- Esta imagen presenta un sistema de riego. -->
+            </div>
+          </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#carruselJardin"
+            role="button"
+            data-slide="prev"
+          >
+            <!-- Este control permite ir a la imagen anterior. -->
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <!-- Este icono representa la flecha izquierda. -->
+            <span class="sr-only">Anterior</span>
+            <!-- Este texto es útil para accesibilidad. -->
+          </a>
+
+          <a
+            class="carousel-control-next"
+            href="#carruselJardin"
+            role="button"
+            data-slide="next"
+          >
+            <!-- Este control permite ir a la imagen siguiente. -->
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <!-- Este icono representa la flecha derecha. -->
+            <span class="sr-only">Siguiente</span>
+            <!-- Este texto es útil para accesibilidad. -->
+          </a>
+        </div>
+      </section>
+
+      <section class="text-center">
+        <!-- Esta sección invita al usuario a seguir navegando. -->
+        <h2 class="mb-3">Trabajamos con ideas claras y soluciones simples</h2>
+        <!-- Este título refuerza la presentación del sitio. -->
+        <p class="mb-4">
+          Si deseas conocer más detalles, contáctanos para una atención
+          personalizada.
+        </p>
+        <!-- Este párrafo motiva al usuario a recorrer el sitio. -->
+        <a href="contacto.html" class="btn btn-outline-success"
+          >Ir a contacto</a
+        >
+        <!-- Este botón dirige al usuario hacia la página de contacto. -->
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <!-- Este pie de página cierra visualmente el sitio. -->
+      <p class="mb-0">espacios verdes que enamoran</p>
+      <!-- Este texto resume el propósito académico del proyecto. -->
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga la librería jQuery. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga Popper, que Bootstrap necesita para algunos componentes. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga los componentes interactivos de Bootstrap. -->
+
+    <script src="js/script.js"></script>
+    <!-- Este script carga el archivo JavaScript del proyecto. -->
+  </body>
+</html>
