@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Esta etiqueta declara el uso de HTML5. -->
+    <meta charset="UTF-8" />
+    <!-- Esta etiqueta permite mostrar correctamente caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Esta etiqueta hace que la página se adapte al tamaño de pantalla del dispositivo. -->
+    <meta
+      name="description"
+      content="Cotización de muestra para servicios de jardinería y paisajismo de Eco Vida."
+    />
+    <!-- Esta etiqueta describe el contenido de la página para buscadores y redes sociales. -->
+    <meta
+      name="keywords"
+      content="cotización Eco Vida, jardinería, paisajismo, mantenimiento de jardines"
+    />
+    <!-- Esta etiqueta reúne palabras clave básicas relacionadas con esta página. -->
+    <meta name="author" content="Eco Vida" />
+    <!-- Esta etiqueta indica el autor o nombre del proyecto. -->
+    <meta name="theme-color" content="#235b35" />
+    <!-- Esta etiqueta define el color principal que algunos navegadores móviles pueden usar. -->
+    <title>Cotización - Eco Vida</title>
+    <!-- Este título aparece en la pestaña del navegador. -->
+    <link rel="icon" href="img/eco_vida_logo_01.jpeg" type="image/jpeg" />
+    <!-- Este enlace usa el logo como icono de la pestaña del navegador. -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Este enlace carga Bootstrap para los estilos base. -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Este enlace carga los estilos personalizados del proyecto. -->
+  </head>
+  <body>
+    <!-- Aquí empieza el contenido visible de la página. -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Esta barra de navegación conecta las páginas principales. -->
+      <div class="container">
+        <!-- Este contenedor centra la barra de navegación. -->
+        <a class="navbar-brand" href="index.html">
+          <!-- Este enlace lleva al usuario a la página de inicio. -->
+          <img
+            src="img/eco_vida_logo_01.jpeg"
+            alt="Logo de Eco Vida"
+            class="logo-navbar"
+          />
+          <!-- Esta imagen funciona como icono pequeño junto al nombre del sitio. -->
+          Eco Vida
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Mostrar menú"
+        >
+          <!-- Este botón abre el menú en pantallas pequeñas. -->
+          <span class="navbar-toggler-icon"></span>
+          <!-- Este icono representa el menú móvil. -->
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <!-- Este bloque agrupa los enlaces del menú. -->
+          <div class="navbar-nav ml-auto">
+            <!-- Este contenedor alinea los enlaces a la derecha. -->
+            <a class="nav-item nav-link" href="index.html">Inicio</a>
+            <!-- Este enlace lleva al inicio. -->
+            <a class="nav-item nav-link" href="servicios.html">Servicios</a>
+            <!-- Este enlace lleva a la página de servicios. -->
+            <a class="nav-item nav-link" href="acerca.html">Acerca de</a>
+            <!-- Este enlace lleva a la página informativa. -->
+            <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+            <!-- Este enlace lleva a la página de contacto. -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <!-- Este bloque contiene toda la lógica visual de la cotización. -->
+      <div class="row justify-content-center">
+        <!-- Esta fila centra el contenido en la pantalla. -->
+        <div class="col-lg-8">
+          <!-- Esta columna limita el ancho para que el contenido sea cómodo de leer. -->
+
+          <div
+            id="sinCotizacion"
+            class="alert alert-success text-center d-none"
+          >
+            <!-- Esta alerta aparece si el usuario entró sin elegir un servicio. -->
+            <!-- Empieza oculta con d-none y JavaScript la muestra si no hay datos. -->
+            <h5>No has seleccionado ningún servicio</h5>
+            <!-- Este título explica por qué no se muestra nada. -->
+            <p>Regresa a servicios y elige uno para continuar.</p>
+            <!-- Este texto orienta al usuario. -->
+            <a href="servicios.html" class="btn btn-success">Ver servicios</a>
+            <!-- Este botón lleva al usuario de regreso a elegir un servicio. -->
+          </div>
+
+          <div
+            id="contenedorFormularioCotizacion"
+            class="caja-cotizacion p-4 p-md-5 d-none"
+          >
+            <!-- Este bloque contiene el formulario de datos numéricos. -->
+            <!-- Empieza oculto con d-none y JavaScript lo muestra si hay un servicio guardado. -->
+
+            <h2 class="text-center mb-2">Completa tu cotización</h2>
+            <!-- Este título indica al cliente que debe ingresar los datos de su propiedad. -->
+
+            <p class="text-center mb-4">
+              Servicio seleccionado:
+              <strong id="nombreServicioFormulario"></strong>
+            </p>
+            <!-- Este párrafo muestra el nombre del servicio que el cliente eligió. -->
+            <!-- El span id="nombreServicioFormulario" es llenado por JavaScript con el valor elegido. -->
+
+            <form id="formCalcularCotizacion">
+              <!-- Este formulario recibe los datos necesarios para completar la cotización. -->
+              <!-- Ahora el cliente ingresa aquí el tamaño y el largo del zacate. -->
+
+              <div class="form-group">
+                <!-- Este bloque agrupa la etiqueta y el campo del tamaño. -->
+                <label for="tamanoPropiedad">Tamaño de la propiedad (m²)</label>
+                <!-- Esta etiqueta indica la unidad que el sistema agregará automáticamente. -->
+                <input
+                  type="number"
+                  id="tamanoPropiedad"
+                  name="tamanoPropiedad"
+                  class="form-control"
+                  placeholder="Ejemplo: 250 o 180.5"
+                  min="1"
+                  max="99999"
+                  step="0.01"
+                  required
+                />
+                <!-- type="number" permite ingresar solo valores numéricos enteros o decimales. -->
+                <!-- min="1" evita valores de cero o negativos. -->
+                <!-- max="99999" limita el rango a un valor razonable. -->
+                <!-- step="0.01" permite hasta dos decimales. -->
+                <!-- El sistema agrega " m2" automáticamente en script.js. -->
+                <!-- No se usa pattern porque type="number" ya controla el formato. -->
+              </div>
+
+              <div class="form-group">
+                <!-- Este bloque agrupa la etiqueta y el campo del largo del zacate. -->
+                <label for="largoZacate">Largo actual del zacate (cm)</label>
+                <!-- Esta etiqueta indica la unidad que el sistema agregará automáticamente. -->
+                <input
+                  type="number"
+                  id="largoZacate"
+                  name="largoZacate"
+                  class="form-control"
+                  placeholder="Ejemplo: 15 o 8.5"
+                  min="1"
+                  max="999"
+                  step="0.1"
+                  required
+                />
+                <!-- type="number" permite ingresar solo valores numéricos enteros o decimales. -->
+                <!-- min="1" evita valores de cero o negativos. -->
+                <!-- max="999" limita el largo del zacate a un valor razonable. -->
+                <!-- step="0.1" permite hasta un decimal. -->
+                <!-- El sistema agrega " cm" automáticamente en script.js. -->
+              </div>
+
+              <button type="submit" class="btn btn-success btn-block">
+                Generar resumen de cotización
+              </button>
+              <!-- Este botón envía los datos para generar el resumen. -->
+            </form>
+          </div>
+
+          <div
+            id="plantillaCotizacion"
+            class="caja-cotizacion p-4 p-md-5 d-none"
+          >
+            <!-- Este bloque muestra el resumen final de la cotización. -->
+            <!-- Empieza oculto con d-none y JavaScript lo muestra después de que el formulario se envía. -->
+
+            <h2 class="text-center mb-4">Resumen de cotización</h2>
+            <!-- Este título indica que el proceso de cotización fue completado. -->
+
+            <div class="fila-cotizacion">
+              <!-- Esta fila muestra el servicio solicitado. -->
+              <span class="etiqueta-cotizacion">Servicio solicitado:</span>
+              <!-- Esta etiqueta identifica el campo. -->
+              <span id="servicioCotizacion"></span>
+              <!-- Este span es llenado por JavaScript con el nombre del servicio guardado. -->
+            </div>
+
+            <div class="fila-cotizacion">
+              <!-- Esta fila muestra el tamaño de la propiedad con la unidad m2. -->
+              <span class="etiqueta-cotizacion">Tamaño de la propiedad:</span>
+              <!-- Esta etiqueta identifica el campo. -->
+              <span id="tamanoCotizacion"></span>
+              <!-- Este span es llenado por JavaScript con el valor más " m2" concatenado. -->
+            </div>
+
+            <div class="fila-cotizacion">
+              <!-- Esta fila muestra el largo del zacate con la unidad cm. -->
+              <span class="etiqueta-cotizacion">Largo del zacate:</span>
+              <!-- Esta etiqueta identifica el campo. -->
+              <span id="zacateCotizacion"></span>
+              <!-- Este span es llenado por JavaScript con el valor más " cm" concatenado. -->
+            </div>
+
+            <div class="fila-cotizacion">
+              <!-- Esta fila muestra la fecha en que se completó la cotización. -->
+              <span class="etiqueta-cotizacion">Fecha de solicitud:</span>
+              <!-- Esta etiqueta identifica el campo. -->
+              <span id="fechaCotizacion"></span>
+              <!-- Este span es llenado por JavaScript con la fecha actual del sistema. -->
+            </div>
+
+            <div class="mt-4">
+              <!-- Este bloque agrega una nota y el botón para volver a servicios. -->
+              <p class="mb-2">
+                La cotización final puede variar después de revisar el terreno.
+              </p>
+              <!-- Este texto aclara que la cotización es una estimación inicial. -->
+              <a href="servicios.html" class="btn btn-success btn-block">
+                Solicitar otro servicio
+              </a>
+              <!-- Este botón permite al usuario regresar a elegir un servicio diferente. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <!-- Este pie de página mantiene el mismo estilo visual del resto del sitio. -->
+      <p class="mb-0">espacios verdes que enamoran</p>
+      <!-- Este texto resume el propósito del proyecto. -->
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga la librería jQuery. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga Popper para componentes de Bootstrap. -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Este script carga la parte interactiva de Bootstrap. -->
+
+    <script src="js/script.js"></script>
+    <!-- Este script carga el JavaScript propio del proyecto. -->
+  </body>
+</html>
