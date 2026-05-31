@@ -1,50 +1,50 @@
 # Eco Vida
 
-Eco Vida ofrece servicios de jardineria, mantenimiento de zonas verdes y paisajismo para hogares, propiedades y espacios exteriores.
+Eco Vida ofrece servicios de jardinería, mantenimiento de zonas verdes y paisajismo para hogares, propiedades y espacios exteriores.
 
-Nuestro objetivo es ayudar a que cada jardin se vea limpio, ordenado y agradable, usando soluciones simples segun las necesidades de cada cliente.
+Nuestro objetivo es ayudar a que cada jardín se vea limpio, ordenado y agradable, usando soluciones simples según las necesidades de cada cliente.
 
 ## Servicios
 
 En Eco Vida puedes encontrar servicios como:
 
 - Corte de zacate.
-- Corte y linea de jardin.
-- Corte, linea de jardin y limpieza de maleza.
+- Corte y línea de jardín.
+- Corte, línea de jardín y limpieza de maleza.
 - Paisajismo.
 
 Cada servicio esta pensado para mejorar la apariencia del terreno y facilitar el cuidado de las zonas verdes.
 
-## Cotizacion
+## Cotización
 
-El sitio permite seleccionar un servicio y generar un resumen inicial de cotizacion.
+El sitio permite seleccionar un servicio y generar un resumen inicial de cotización.
 
 Para completar la solicitud, solo debes indicar:
 
 - El servicio que deseas.
-- El tamano aproximado de la propiedad.
+- El tamaño aproximado de la propiedad.
 - El largo actual del zacate.
 
-La cotizacion mostrada es una guia inicial. El precio final puede variar despues de revisar el estado real del terreno.
+La cotización mostrada es una guía inicial. El precio final puede variar después de revisar el estado real del terreno.
 
 ## Contacto
 
-Tambien puedes usar el formulario de contacto para enviar una consulta general, pedir informacion sobre mantenimiento o solicitar detalles sobre una cotizacion.
+Tambien puedes usar el formulario de contacto para enviar una consulta general, pedir información sobre mantenimiento o solicitar detalles sobre una cotización.
 
-Despues de completar el formulario, el sitio muestra una confirmacion de envio.
+Después de completar el formulario, el sitio muestra una confirmación de envío.
 
 ## Acerca de Eco Vida
 
 Eco Vida busca transformar espacios exteriores en lugares mas agradables, limpios y naturales.
 
-Trabajamos con una vision practica: escuchar la necesidad del cliente, revisar el espacio y proponer una solucion clara para mejorar el jardin o zona verde.
+Trabajamos con una visión práctica: escuchar la necesidad del cliente, revisar el espacio y proponer una solución clara para mejorar el jardín o zona verde.
 
-## Navegacion del sitio
+## Navegación del sitio
 
-El sitio cuenta con secciones sencillas para que puedas encontrar la informacion rapidamente:
+El sitio cuenta con secciones sencillas para que puedas encontrar la información rápidamente:
 
-- Inicio: presentacion general de Eco Vida.
+- Inicio: presentación general de Eco Vida.
 - Servicios: lista de servicios disponibles.
-- Cotizacion: resumen inicial del servicio seleccionado.
-- Acerca de: informacion general sobre Eco Vida.
+- Cotización: resumen inicial del servicio seleccionado.
+- Acerca de: información general sobre Eco Vida.
 - Contacto: formulario para consultas.
