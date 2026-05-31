@@ -1,63 +1,50 @@
 # Eco Vida
 
-Eco Vida es un sitio web estático de muestra para una empresa de jardinería, mantenimiento de zonas verdes y paisajismo.
+Eco Vida ofrece servicios de jardineria, mantenimiento de zonas verdes y paisajismo para hogares, propiedades y espacios exteriores.
 
-El sitio está pensado como MVP publicable en Netlify. Incluye páginas informativas, selección de servicios, una cotización de muestra y un formulario de contacto demostrativo.
+Nuestro objetivo es ayudar a que cada jardin se vea limpio, ordenado y agradable, usando soluciones simples segun las necesidades de cada cliente.
 
-## Páginas
+## Servicios
 
-- `index.html`: página principal.
-- `servicios.html`: lista de servicios disponibles.
-- `cotizacion.html`: cotización de muestra que se abre después de seleccionar un servicio.
-- `acerca.html`: información general del proyecto.
-- `contacto.html`: formulario de contacto de muestra.
-- `404.html`: página para rutas no encontradas.
+En Eco Vida puedes encontrar servicios como:
 
-## Importante
+- Corte de zacate.
+- Corte y linea de jardin.
+- Corte, linea de jardin y limpieza de maleza.
+- Paisajismo.
 
-El formulario de contacto no envía información a un servidor todavía. Por ahora solo valida los campos y muestra un mensaje de confirmación de muestra.
+Cada servicio esta pensado para mejorar la apariencia del terreno y facilitar el cuidado de las zonas verdes.
 
-La cotización tampoco guarda datos en una base de datos. Usa JavaScript del navegador para mostrar un resumen temporal.
+## Cotizacion
 
-## Publicación en Netlify
+El sitio permite seleccionar un servicio y generar un resumen inicial de cotizacion.
 
-Para publicar este MVP:
+Para completar la solicitud, solo debes indicar:
 
-1. Entra a Netlify.
-2. Crea un nuevo sitio.
-3. Sube la carpeta `eco_vida` completa.
-4. No uses comando de build.
-5. Usa la carpeta raíz del proyecto como carpeta de publicación.
+- El servicio que deseas.
+- El tamano aproximado de la propiedad.
+- El largo actual del zacate.
 
-Si conectas el proyecto desde Git y la raíz del repositorio es `eco_vida`, Netlify puede usar la configuración de `netlify.toml`.
+La cotizacion mostrada es una guia inicial. El precio final puede variar despues de revisar el estado real del terreno.
 
-## Dependencias externas
+## Contacto
 
-El sitio usa CDN para:
+Tambien puedes usar el formulario de contacto para enviar una consulta general, pedir informacion sobre mantenimiento o solicitar detalles sobre una cotizacion.
 
-- Bootstrap CSS.
-- jQuery.
-- Popper.
-- Bootstrap JavaScript.
+Despues de completar el formulario, el sitio muestra una confirmacion de envio.
 
-El usuario final necesita conexión a Internet para cargar esos recursos externos.
+## Acerca de Eco Vida
 
-## Estructura
+Eco Vida busca transformar espacios exteriores en lugares mas agradables, limpios y naturales.
 
-```text
-eco_vida/
-├── 404.html
-├── README.md
-├── acerca.html
-├── contacto.html
-├── cotizacion.html
-├── index.html
-├── netlify.toml
-├── robots.txt
-├── servicios.html
-├── css/
-│   └── style.css
-├── img/
-└── js/
-    └── script.js
-```
+Trabajamos con una vision practica: escuchar la necesidad del cliente, revisar el espacio y proponer una solucion clara para mejorar el jardin o zona verde.
+
+## Navegacion del sitio
+
+El sitio cuenta con secciones sencillas para que puedas encontrar la informacion rapidamente:
+
+- Inicio: presentacion general de Eco Vida.
+- Servicios: lista de servicios disponibles.
+- Cotizacion: resumen inicial del servicio seleccionado.
+- Acerca de: informacion general sobre Eco Vida.
+- Contacto: formulario para consultas.
