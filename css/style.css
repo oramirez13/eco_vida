@@ -6,10 +6,7 @@
   --color-verde-medio: #3f7a4e;
   /* Este color verde suave se usará en fondos ligeros y detalles. */
   --color-verde-suave: #dcecdf;
-  /* Este color café oscuro se usará en bloques secundarios. */
-  --color-cafe: #7a4e2e;
-  /* Este color naranja se usará en acentos cálidos. */
-  --color-naranja: #b3682c;
+
   /* Este color amarillo se usará en botones y detalles destacados. */
   --color-amarillo: #fcc800;
   /* Este color blanco se usará como fondo principal del sitio. */
@@ -90,10 +87,10 @@ img {
   height: auto;
 }
 
-/* Este selector cambia el fondo de la barra de navegación. */
-.bg-dark {
-  /* Esta propiedad reemplaza el color oscuro por verde para el menú y el pie. */
-  background-color: var(--color-verde) !important;
+/* Este selector cambia el fondo de la barra de navegación y el pie. */
+nav.bg-dark,
+footer.bg-dark {
+  background-color: var(--color-verde);
 }
 
 /* Este selector cambia el estilo del nombre del sitio en la barra. */
@@ -489,6 +486,19 @@ footer {
     /* Esta propiedad deja más espacio para el título y el botón. */
     max-width: 120px;
   }
+}
+
+/* Esta clase oculta contenido visualmente pero lo mantiene accesible para lectores de pantalla. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Este bloque respeta la preferencia del sistema para reducir movimiento. */
