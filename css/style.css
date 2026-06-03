@@ -87,9 +87,8 @@ img {
   height: auto;
 }
 
-/* Este selector cambia el fondo de la barra de navegación y el pie. */
-nav.bg-dark,
-footer.bg-dark {
+/* Esta clase aplica el color verde a fondos de barra de navegación y pie. */
+.bg-verde {
   background-color: var(--color-verde);
 }
 
