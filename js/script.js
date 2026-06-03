@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (campoMensaje !== null && contador !== null) {
     // Esta condición evita errores en páginas que no tienen formulario de contacto.
 
-    campoMensaje.addEventListener("keyup", function () {
+    campoMensaje.addEventListener("input", function () {
       // Este evento se activa cada vez que el usuario suelta una tecla en el mensaje.
 
       var cantidadDeCaracteres = campoMensaje.value.length;
