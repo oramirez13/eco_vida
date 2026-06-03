@@ -87,8 +87,9 @@ img {
   height: auto;
 }
 
-/* Esta clase aplica el color verde a fondos de barra de navegación y pie. */
-.bg-verde {
+/* Color verde para navbar y pie. */
+nav.navbar,
+footer {
   background-color: var(--color-verde);
 }
 
@@ -366,13 +367,7 @@ a:focus,
   color: var(--color-verde);
 }
 
-/* Este selector cambia el estilo del pie de página. */
-footer {
-  /* Este fondo verde mantiene consistencia con el encabezado. */
-  background-color: var(--color-verde) !important;
-  /* Este color hace que el texto del pie sea fácil de leer. */
-  color: #ffffff;
-}
+
 
 /* Este selector se aplica a pantallas pequeñas como celulares. */
 @media (max-width: 767px) {
