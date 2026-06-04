@@ -63,8 +63,6 @@ body {
   line-height: var(--altura-linea);
   /* Este color mejora la lectura del texto principal. */
   color: var(--color-verde);
-  /* Esta propiedad evita que aparezca una barra horizontal innecesaria. */
-  overflow-x: hidden;
   /* Esta propiedad protege el contenido si el dispositivo tiene muesca superior. */
   padding-top: env(safe-area-inset-top, 0px);
   /* Esta propiedad protege el contenido si el dispositivo tiene borde derecho especial. */
@@ -88,8 +86,7 @@ img {
 }
 
 /* Color verde para navbar y pie. */
-nav.navbar,
-footer {
+.bg-verde {
   background-color: var(--color-verde);
 }
 
@@ -267,24 +264,6 @@ h5 {
   /* Este borde mantiene el mismo amarillo del fondo. */
   border-color: var(--color-amarillo);
   /* Este color verde mantiene el texto dentro de la paleta pedida. */
-  color: var(--color-verde);
-}
-
-/* Este selector adapta el boton amarillo para que no use colores fuera de la paleta. */
-.btn-outline-warning {
-  /* Este color usa verde para el texto del botón. */
-  color: var(--color-verde);
-  /* Este borde amarillo marca el botón como acento visual. */
-  border-color: var(--color-amarillo);
-}
-
-/* Este selector cambia el estado hover del botón amarillo. */
-.btn-outline-warning:hover {
-  /* Este fondo amarillo crea un mensaje visual destacado. */
-  background-color: var(--color-amarillo);
-  /* Este borde conserva el mismo color del fondo. */
-  border-color: var(--color-amarillo);
-  /* Este color verde respeta la regla del texto. */
   color: var(--color-verde);
 }
 

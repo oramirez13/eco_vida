@@ -43,31 +43,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function leerServicioTemporal() {
-    // Esta función intenta obtener el servicio seleccionado desde localStorage o desde la URL.
+    // Esta función intenta obtener el servicio seleccionado desde la URL o desde localStorage.
 
     var servicioGuardado = "";
     // Esta variable empieza vacía y luego recibirá el servicio encontrado.
 
-    try {
-      // Este bloque intenta leer el dato guardado en localStorage.
+    var parametros = new URLSearchParams(window.location.search);
+    // Esta línea lee los parámetros que vienen después del signo ? en la URL.
 
-      servicioGuardado = localStorage.getItem("servicioTemporalEcoVida");
-      // Esta línea recupera el servicio guardado desde servicios.html.
-    } catch (error) {
-      // Este bloque se ejecuta si el navegador no permite leer localStorage.
-
-      servicioGuardado = "";
-      // Esta línea mantiene la variable vacía para intentar el segundo método.
-    }
+    servicioGuardado = parametros.get("servicio");
+    // Esta línea intenta leer una URL como cotizacion.html?servicio=Corte.
 
     if (!servicioGuardado) {
-      // Esta condición se cumple si localStorage no tenía ningún servicio.
+      // Esta condición se cumple si la URL no tenía ningún servicio.
 
-      var parametros = new URLSearchParams(window.location.search);
-      // Esta línea lee los parámetros que vienen después del signo ? en la URL.
+      try {
+        // Este bloque intenta leer el dato guardado en localStorage.
 
-      servicioGuardado = parametros.get("servicio");
-      // Esta línea intenta leer una URL como cotizacion.html?servicio=Corte.
+        servicioGuardado = localStorage.getItem("servicioTemporalEcoVida");
+        // Esta línea recupera el servicio guardado desde servicios.html.
+      } catch (error) {
+        // Este bloque se ejecuta si el navegador no permite leer localStorage.
+
+        servicioGuardado = "";
+        // Esta línea mantiene la variable vacía como fallo final.
+      }
     }
 
     return textoSeguro(servicioGuardado);
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formContacto.reset();
       // Esta línea limpia todos los campos del formulario.
 
-      contador.textContent = "0";
+      contador.textContent = 0;
       // Esta línea reinicia el contador de caracteres.
     });
   }
