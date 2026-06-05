@@ -130,10 +130,10 @@ img {
 
 /* Este selector define el área superior de la página principal. */
 .encabezado-principal {
-  /* Este fondo blanco hace que el encabezado se vea más limpio. */
-  background-color: #ffffff;
-  /* Este color verde mantiene la identidad principal del sitio. */
-  color: var(--color-verde);
+  /* Este fondo verde refuerza la identidad principal del sitio. */
+  background-color: var(--color-verde);
+  /* Este color blanco mejora el contraste sobre el fondo verde. */
+  color: #ffffff;
 }
 
 /* Este selector reduce el tamaño del titulo principal del encabezado. */
@@ -229,8 +229,8 @@ h5 {
 /* Este selector conserva el texto verde dentro del encabezado principal. */
 .encabezado-principal h1,
 .encabezado-principal p {
-  /* Este color verde mantiene el texto visible sobre fondo blanco. */
-  color: var(--color-verde);
+  /* Este color blanco mantiene el texto visible sobre fondo verde. */
+  color: #ffffff;
 }
 
 /* Este selector cambia el estilo base de los botones verdes del proyecto. */
