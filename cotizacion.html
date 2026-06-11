@@ -171,6 +171,27 @@
                 <!-- El sistema agrega " cm" automáticamente en script.js. -->
               </div>
 
+              <div class="form-group" id="telefonico">
+                <label for="telefonoCotizacion"
+                  >Número telefónico <span aria-hidden="true">*</span></label
+                >
+                <div class="campo-telefono">
+                  <span class="prefijo-telefono" aria-hidden="true">+506</span>
+                  <input
+                    type="tel"
+                    id="telefonoCotizacion"
+                    name="telefonoCotizacion"
+                    class="form-control"
+                    required
+                    inputmode="numeric"
+                    pattern="[0-9]{8}"
+                    maxlength="8"
+                    placeholder="8888 8888"
+                    autocomplete="tel-national"
+                  />
+                </div>
+              </div>
+
               <button type="submit" class="btn btn-success btn-block">
                 Generar resumen de cotización
               </button>
@@ -210,6 +231,14 @@
               <!-- Esta etiqueta identifica el campo. -->
               <span id="zacateCotizacion"></span>
               <!-- Este span es llenado por JavaScript con el valor más " cm" concatenado. -->
+            </div>
+
+            <div class="fila-cotizacion">
+              <!-- Esta fila muestra el número telefónico ingresado. -->
+              <span class="etiqueta-cotizacion">Teléfono:</span>
+              <!-- Esta etiqueta identifica el campo. -->
+              <span id="telefonoCotizacion"></span>
+              <!-- Este span es llenado por JavaScript con el número ingresado. -->
             </div>
 
             <div class="fila-cotizacion">

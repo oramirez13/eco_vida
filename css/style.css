@@ -336,6 +336,32 @@ a:focus,
   outline-offset: 3px;
 }
 
+/* Este selector coloca el prefijo +506 y el input en la misma fila. */
+.campo-telefono {
+  display: flex;
+  align-items: center;
+}
+
+/* Este selector da estilo al prefijo +506 para que parezca parte del input. */
+.prefijo-telefono {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-right: none;
+  border-radius: 0.25rem 0 0 0.25rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  white-space: nowrap;
+}
+
+/* Este selector quita el borde izquierdo redondeado para unir el input al prefijo. */
+.campo-telefono .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  flex: 1;
+}
+
 /* Este selector cambia el estilo de la alerta de confirmación. */
 .alert-success {
   /* Este fondo amarillo hace que el mensaje destaque mas. */

@@ -348,6 +348,9 @@ document.addEventListener("DOMContentLoaded", function () {
       var largoIngresado = textoSeguro(obtenerElemento("largoZacate").value);
       // Esta variable captura el largo del zacate escrito por el cliente.
 
+      var telefonoIngresado = limpiarTexto(obtenerElemento("telefonoCotizacion").value);
+      // Esta variable captura el número telefónico escrito por el cliente.
+
       var expresionDecimal = /^[0-9]+(\.[0-9]+)?$/;
       // Esta expresión acepta números enteros y decimales con punto.
 
@@ -379,6 +382,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       obtenerElemento("zacateCotizacion").textContent = largoIngresado + " cm";
       // Esta línea muestra el largo del zacate con su unidad.
+
+      obtenerElemento("telefonoCotizacion").textContent = "+506 " + telefonoIngresado;
+      // Esta línea muestra el número telefónico completo con prefijo.
 
       obtenerElemento("fechaCotizacion").textContent = new Date().toLocaleDateString("es-CR");
       // Esta línea muestra la fecha actual con formato de Costa Rica.
