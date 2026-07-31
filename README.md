@@ -18,8 +18,6 @@ Todas estas herramientas trabajan juntas para que la experiencia de navegación 
 
 Nuestro objetivo es ayudar a que cada jardín se vea limpio, ordenado y agradable, usando soluciones simples según las necesidades de cada cliente.
 
-## Servicios
-
 En Eco Vida puedes encontrar servicios como:
 
 - Corte de zacate.
@@ -43,13 +41,13 @@ La cotización mostrada es una guía inicial. El precio final puede variar despu
 
 ## Contacto
 
-Tambien puedes usar el formulario de contacto para enviar una consulta general, pedir información sobre mantenimiento o solicitar detalles sobre una cotización.
+También puedes usar el formulario de contacto para enviar una consulta general, pedir información sobre mantenimiento o solicitar detalles sobre una cotización.
 
 Después de completar el formulario, el sitio muestra una confirmación de envío.
 
 ## Acerca de Eco Vida
 
-Eco Vida busca transformar espacios exteriores en lugares mas agradables, limpios y naturales.
+Eco Vida busca transformar espacios exteriores en lugares más agradables, limpios y naturales.
 
 Trabajamos con una visión práctica: escuchar la necesidad del cliente, revisar el espacio y proponer una solución clara para mejorar el jardín o zona verde.
 

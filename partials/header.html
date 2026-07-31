@@ -1,0 +1,55 @@
+<!-- Encabezado compartido por todas las páginas del sitio.
+     Este archivo se carga desde js/components.js para no repetirlo en cada página. -->
+
+<!-- Este enlace solo es visible para lectores de pantalla y permite saltar
+     directamente al contenido principal de la página. -->
+<a class="sr-only" href="#contenido-principal">
+  Saltar al contenido principal
+</a>
+
+<!-- Esta barra de navegación contiene el menú principal del sitio. -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-verde">
+  <div class="container">
+    <!-- Este contenedor centra el contenido y le da un ancho ordenado. -->
+    <a class="navbar-brand" href="index.html">
+      <!-- Esta imagen funciona como icono pequeño junto al nombre del sitio. -->
+      <img
+        src="img/eco_vida_logo_01.jpeg"
+        alt="Logo de Eco Vida"
+        class="logo-navbar"
+      />
+      Eco Vida
+    </a>
+    <!-- Este enlace funciona como nombre o logo del sitio. -->
+
+    <!-- Este botón aparece en pantallas pequeñas para abrir el menú. -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#menuPrincipal"
+      aria-controls="menuPrincipal"
+      aria-expanded="false"
+      aria-label="Mostrar menú"
+    >
+      <!-- Este icono muestra las líneas típicas del menú móvil. -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <!-- Este bloque contiene los enlaces que se colapsan en móvil. -->
+      <div class="navbar-nav ml-auto">
+        <!-- Este contenedor agrupa los enlaces de navegación.
+             La clase "active" se agrega automáticamente desde components.js. -->
+        <a class="nav-item nav-link" href="index.html">Inicio</a>
+        <!-- Este enlace lleva a la página de inicio. -->
+        <a class="nav-item nav-link" href="servicios.html">Servicios</a>
+        <!-- Este enlace lleva a la página de servicios. -->
+        <a class="nav-item nav-link" href="acerca.html">Acerca de</a>
+        <!-- Este enlace lleva a la página informativa del sitio. -->
+        <a class="nav-item nav-link" href="contacto.html">Contacto</a>
+        <!-- Este enlace lleva a la página de contacto. -->
+      </div>
+    </div>
+  </div>
+</nav>
